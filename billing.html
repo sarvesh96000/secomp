@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billing - College Mess Portal</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin:0; padding:0;
+        background: url("food table.jpg")
+	            no-repeat center center fixed;
+	background-size: cover;
+	position: relative;
+    }
+    header {
+        background:#7a1117;
+        color:white;
+        padding:20px;
+        text-align:center;
+    }
+    nav {
+        background:#7a1117;
+        display:flex;
+        justify-content:center;
+    }
+    nav a {
+        color:white;
+        text-decoration:none;
+        padding:14px 20px;
+        display:block;
+    }
+    nav a:hover {
+        background:#7a1117;
+    }
+    .container {
+        max-width:800px;
+        margin:30px auto;
+        background:white;
+        padding:20px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+        border-radius:6px;
+    }
+    table {
+        width:100%;
+        border-collapse:collapse;
+        margin-top:20px;
+    }
+    th, td {
+        border:1px solid #ddd;
+        padding:10px;
+        text-align:center;
+    }
+    th {
+        background:#7a1117;
+        color:white;
+    }
+    .total {
+        text-align:right;
+        margin-top:20px;
+        font-weight:bold;
+        font-size:1.2em;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Billing Details</h1>
+</header>
+
+<nav>
+    <a href="Mess3.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="book meal.html">Book Meal</a>
+    <a href="billing.html">Billing</a>
+    <a href="admin login.html">Admin Login</a>
+</nav>
+
+<div class="container">
+    <h2>Your Today's Bill</h2>
+    
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Meal Type</th>
+            <th>Cost (₹)</th>
+        </tr>
+        <tr>
+            <td>17-Sep-2025</td>
+            <td>Breakfast</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>17-Sep-2025</td>
+            <td>Lunch</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>17-Sep-2025</td>
+            <td>Dinner</td>
+            <td>60</td>
+        </tr>
+    </table>
+
+    <p class="total">Total: ₹140</p>
+    <button type="submit" class="btn">Pay now</button>
+</div>
+
+<footer style="background:#7a1117;color:white;text-align:center;padding:10px;margin-top:30px;">
+    &copy; 2025 College Mess Portal. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Today's Mess Menu</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background:url("");
+        margin:0; padding:0;
+    }
+    header {
+        background:#7a1117;
+        color:white;
+        padding:20px;
+        text-align:center;
+    }
+    .container {
+        max-width:600px;
+        margin:40px auto;
+        background:white;
+        padding:20px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+        border-radius:6px;
+        text-align:center;
+    }
+    h2 {
+        color:#7a1117;
+    }
+    p {
+        font-size:1.1em;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Today's Mess Menu</h1>
+</header>
+
+<div class="container">
+    <h2 id="day"></h2>
+    <p id="menu"></p>
+</div>
+
+<script>
+    // Get the current day (0 = Sunday, 1 = Monday, … 6 = Saturday)
+    const today = new Date().getDay();
+
+    let dayName;
+    let todayMenu;
+
+    switch (today) {
+        case 0: // Sunday
+            dayName = "Sunday";
+            todayMenu = "Breakfast: Bread & Jam<br>Lunch: Veg Fried Rice, Raita<br>Dinner: Chapati & Dal Tadka";
+            break;
+        case 1: // Monday
+            dayName = "Monday";
+            todayMenu = "Breakfast: Idli & Sambar<br>Lunch: Rice, Dal, Vegetable Curry<br>Dinner: Chapati & Paneer Curry";
+            break;
+        case 2: // Tuesday
+            dayName = "Tuesday";
+            todayMenu = "Breakfast: Poori & Bhaji<br>Lunch: Lemon Rice, Curd<br>Dinner: Rice & Chicken Curry";
+            break;
+        case 3: // Wednesday
+            dayName = "Wednesday";
+            todayMenu = "Breakfast: Upma & Chutney<br>Lunch: Veg Biryani, Raita<br>Dinner: Chapati & Dal Fry";
+            break;
+        case 4: // Thursday
+            dayName = "Thursday";
+            todayMenu = "Breakfast: Masala Dosa<br>Lunch: Rice, Sambar, Veg Curry<br>Dinner: Fried Rice & Gobi Manchurian";
+            break;
+        case 5: // Friday
+            dayName = "Friday";
+            todayMenu = "Breakfast: Pancakes & Honey<br>Lunch: Veg Pulao, Raita<br>Dinner: Chapati & Mixed Veg Curry";
+            break;
+        case 6: // Saturday
+            dayName = "Saturday";
+            todayMenu = "Breakfast: Paratha & Curd<br>Lunch: Rice, Rasam, Potato Fry<br>Dinner: Noodles & Spring Rolls";
+            break;
+        default:
+            dayName = "Unknown Day";
+            todayMenu = "Menu not available.";
+    }
+
+    // Display results on the page
+    document.getElementById("day").innerText = "Menu for " + dayName;
+    document.getElementById("menu").innerHTML = todayMenu;
+</script>
+
+</body>
+</html>
